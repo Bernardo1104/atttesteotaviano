@@ -1,0 +1,19 @@
+package com.example;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class DiscountCalculatorTest {
+
+    DiscountCalculator calc = new DiscountCalculator();
+
+    @Test
+    void shouldNotApplyDiscount() {
+        assertEquals(50, calc.calculateDiscount(50));
+    }
+
+    @Test
+    void shouldApply10PercentDiscount() {
+        assertEquals(180, calc.calculateDiscount(200));
+    }
+}
